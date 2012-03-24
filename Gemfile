@@ -40,6 +40,7 @@ gem 'jquery-rails'
 gem "twitter-bootstrap-rails", "~> 2.0.2"
 gem "haml-rails"
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
+gem "hamlbars"
 
 group :development, :test do 
   gem "rspec-rails", "~> 2.8.1"

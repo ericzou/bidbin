@@ -8,6 +8,3 @@
 
 window.Bidbin = Ember.Application.create
 
-Bidbin.Person = Ember.Object.extend
-  say: (thing) ->  
-      alert(thing)

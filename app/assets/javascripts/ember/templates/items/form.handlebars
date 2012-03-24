@@ -1,0 +1,8 @@
+{{#with item}}
+  {{view Ember.TextField valueBinding="title" placeholder="Title"}}
+  {{view Ember.TextArea valueBinding="description"  placeholder="Description"}}
+  {{view Ember.TextArea valueBinding="paypal_email"  placeholder="Paypal Email"}}
+  <button type="submit">
+    {{#if id}}Update{{else}}Create{{/if}}
+  </button>
+{{/with}}

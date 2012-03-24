@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require ember
+//= require ember-dev
+//= require vendor/ember-rest
 //= require ember/bidbin
 //= require_tree .

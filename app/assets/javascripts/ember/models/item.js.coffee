@@ -1,4 +1,7 @@
 Bidbin.Item = Ember.Object.extend
-  title : null
-  description : null
-  paypal_email : null
+  resourceUrl : '/items'
+  resourceName : 'item'
+  
+  str: Ember.computed ->
+    return "#{this.get("title")} #{this.get('description')} #{this.get('paypal_email')}"
+  
