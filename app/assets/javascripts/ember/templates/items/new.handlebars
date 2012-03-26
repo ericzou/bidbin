@@ -1,4 +1,65 @@
-<h1> blah </h1>
-<a></a>
-{{view Bidbin.FormItemView}}
+<br>
+<br>
+<div class="row-fluid">
+  <div class="span6">
+    <h2 class="">Enter something about your item</h2>
+    {{view Bidbin.FormItemView}}  
+  </div>
+  <div class="span6">
+    <h2 class="">Live Preview</h2>
+    <div class="preview-container row-fluid">
+      <div class="span6 images">
+        <div class="row-fluid">
+          <div class="span12 primary-image">
+            <img src="http://flickholdr.com/300/200/" alt="">
+          </div>
+          <div class="row-fluid ">
+            <div class="span4 secondary-image">
+              <img src="http://flickholdr.com/95/70/" alt="">
+            </div>
+            <div class="span4 secondary-image">
+              <img src="http://flickholdr.com/95/70/" alt="">
+            </div>
+            <div class="span4 secondary-image">
+              <img src="http://flickholdr.com/95/70/" alt=""> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="span6 item-details">
+        <h3 class="title">Ralph Lauren Large Womens lot</h3>
+        <p class="description">
+          Invoking the style and comfort of our iconic polo shirt, our Big Pony mesh cardigan offers an updated take on an timeless classic. 
+        </p>
+        <div class="paypal-buy-button">
+          <img src="http://leatherwrapbracelet.com/wp-content/uploads/2010/12/paypal_buynow.gif" alt="" class="pull-right">  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  .preview-container{
+  }
+
+  .primary-image img{
+    width: 100%; 
+    height: 95%; 
+    display: block; 
+    margin: 5px auto;
+  }
+
+  .secondary-image img{
+    margin: 5px auto; 
+    width: 100%; 
+    height: 95%; 
+    display: block;
+  }
+  
+  .paypal-buy-button{
+    margin-top: 60px;
+  }
+
+</style>
 
