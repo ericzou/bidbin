@@ -56,6 +56,11 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
+    hamlbars (2012.3.21)
+      execjs (>= 1.2)
+      haml
+      sprockets
+      tilt
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -143,6 +148,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   ember-rails!
   haml-rails
+  hamlbars
   jquery-rails
   rails (= 3.2.1)
   rspec-rails (~> 2.8.1)

@@ -6,5 +6,4 @@
 #= require_tree ./templates
 
 
-window.Bidbin = Ember.Application.create
-
+window.Bidbin = Ember.Application.create()
