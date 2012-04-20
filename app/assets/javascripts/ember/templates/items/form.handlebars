@@ -9,13 +9,11 @@
     </div>
 
     <div class="row-fluid">
-      {{view Ember.TextArea valueBinding="paypal_email"  placeholder="Paypal Email" class="span10"}}
+      {{view Ember.TextField valueBinding="paypal_email"  placeholder="Paypal Email" class="span10"}}
     </div>
 
     <div class="row-fluid">
-      <button type="submit">
-        {{#if id}}Update{{else}}Create{{/if}}
-      </button>
+      {{ view Bidbin.CreateItemButtonView target="Bidbin.itemsController" action="create"}}
     </div>
     {{/with}}
 </div>
