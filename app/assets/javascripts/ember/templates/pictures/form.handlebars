@@ -1,0 +1,23 @@
+<div class="row-fluid">
+    {{#view Bidbin.AddPictureView class="add-picture"}}
+      <span class="btn btn-success fileinput-button">
+        <i class="icon-plus icon-white"></i>
+        <span>Add files...</span>
+        <input type="file" name="picture[file]" id="fileupload" data-url="/pictures" multiple>
+      </span>
+    {{/view}}
+  </form>
+</div>
+
+
+{{#view Bidbin.StatView}}
+<ul id="stats">
+  <li>Stats Here </li>
+  {{#with Bidbin.picturesController.content}}
+    <li>Picture count : {{ length }}</li>  
+  {{/with}}
+  {{#each pictures  }}
+    <li>{{this.id}} : {{this.file_file_name}}</li>
+  {{/each}}
+</ul>
+{{/view}}

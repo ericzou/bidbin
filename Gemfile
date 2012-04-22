@@ -42,6 +42,10 @@ gem "haml-rails"
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
 gem "hamlbars"
 
+gem "friendly_id", "~> 4.0.1"
+
+gem "paperclip", "~> 3.0"
+
 group :development, :test do 
   gem "rspec-rails", "~> 2.8.1"
 end

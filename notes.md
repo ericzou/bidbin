@@ -11,4 +11,11 @@ Bidbin.FormItemTextFieldView = Ember.TextField.extend({
 no keyup magic valueBinding is all it needed - {{view Ember.TextField valueBinding="title" placeholder="Title" class="span10"}} 
 
 
+bind a value inside an array need ('content.@each'). e.g. 
+  primaryPicture : (-> 
+    if this.get('content').length > 0
+      return this.get('content')[0]
+  ).property('content.@each')
+
+
 

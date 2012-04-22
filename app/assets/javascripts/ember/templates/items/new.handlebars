@@ -1,9 +1,17 @@
 <br>
 <br>
 <div class="row-fluid">
-  <div class="span6 form">
-    <h2 class="">Enter something about your item</h2>
-    {{view Bidbin.FormItemView}}  
+  <div class="span6">
+    <h2 class="">Upload a few pictures</h2>
+    <div class="picture-upload">
+      {{ view Bidbin.FormPictureView}}
+    </div>
+
+    <h2 class="">Enter a few words</h2>
+    <div class="form">
+      {{view Bidbin.FormItemView}}  
+    </div>
+    
   </div>
   <div class="span6 live-prview">
     <h2 class="">Live Preview</h2>

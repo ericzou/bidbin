@@ -5,7 +5,5 @@ Bidbin.FormItemView = Ember.View.extend
 
 Bidbin.CreateItemButtonView = Ember.Button.extend
   newItemBinding : 'Bidbin.itemsController.newItem'
-  name : "Create"
-  content : "Create"
   
   

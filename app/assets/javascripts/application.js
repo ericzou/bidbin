@@ -12,6 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require vendor/jquery.ui.widget
+//= require vendor/file-upload/jquery.iframe-transport
+//= require vendor/file-upload/jquery.fileupload
+//= require vendor/file-upload/load-image.min.js
+//= require vendor/file-upload/canvas-to-blob.min.js
 //= require twitter/bootstrap
 //= require ember-dev
 //= require vendor/ember-rest

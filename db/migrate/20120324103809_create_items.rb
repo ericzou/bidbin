@@ -4,6 +4,7 @@ class CreateItems < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.string :paypal_email
+      t.string :slug
 
       t.timestamps
     end

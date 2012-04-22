@@ -1,4 +1,6 @@
 Bidbin::Application.routes.draw do
+  resources :pictures
+
   resources :items
 
   # The priority is based upon order of creation:
