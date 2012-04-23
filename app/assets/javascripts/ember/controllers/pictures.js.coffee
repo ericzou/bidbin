@@ -11,6 +11,7 @@ Bidbin.picturesController = Ember.ResourceController.create
   ).property('content.@each')
   secondaryPictures : (->
     content = this.get('content')
-    if content.length > 1 then content[1..content.length-1] else []
+    index_of_last = if content.length > 4 then 3 else content.length-1  
+    if content.length > 1 then content[1..index_of_last] else []
   ).property('content.@each').cacheable()
 
