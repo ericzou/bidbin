@@ -18,4 +18,6 @@ bind a value inside an array need ('content.@each'). e.g.
   ).property('content.@each')
 
 
+use setter to change the value, it will trigger binding.
+
 

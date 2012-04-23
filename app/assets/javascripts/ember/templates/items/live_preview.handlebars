@@ -1,25 +1,24 @@
 
 {{#view Bidbin.PicturePreview}}
   {{#if primaryPicture }}
-    <div>primary : {{ primaryPicture }}</div>     
+    <div>primary : {{ primaryPicture.id }}</div>     
   {{/if}}
+  {{#each secondaryPictureUrls}}
+    <div>{{this}}</div>
+  {{/each}}
 <div>pictures : {{ pictures.length }}</div>
 <div class="preview-container row-fluid">
 <div class="span6 images">
   <div class="row-fluid">
     <div class="span12 primary-image">
-      <img {{bindAttr src="primaryPicture.url"}} alt="">
+      <img {{bindAttr src="primaryPictureSrc"}} alt="">
     </div>
     <div class="row-fluid ">
+      {{#each secondaryPictureUrls}}
       <div class="span4 secondary-image">
-        <img src="http://placehold.it/95x70" alt="">
+        <img {{bindAttr src="this"}} alt="">
       </div>
-      <div class="span4 secondary-image">
-        <img src="http://placehold.it/95x70" alt="">
-      </div>
-      <div class="span4 secondary-image">
-        <img src="http://placehold.it/95x70" alt=""> 
-      </div>
+      {{/each}}
     </div>
   </div>
 </div>

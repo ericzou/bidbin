@@ -39,7 +39,7 @@ gem 'jquery-rails'
 # custom configuration
 gem "twitter-bootstrap-rails", "~> 2.0.2"
 gem "haml-rails"
-gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
+gem "ember-rails", '~> 0.4.0', :git => "https://github.com/emberjs/ember-rails.git"
 gem "hamlbars"
 
 gem "friendly_id", "~> 4.0.1"

@@ -21,4 +21,17 @@ Bidbin.StatView = Ember.View.extend({
 Bidbin.PicturePreview = Ember.View.extend({
   picturesBinding : 'Bidbin.picturesController.content'
   primaryPictureBinding : 'Bidbin.picturesController.primaryPicture'
+  secondaryPicturesBinding : 'Bidbin.picturesController.secondaryPictures'
+  primaryPictureSrc : (->
+    primaryPicture = this.get('primaryPicture')
+    if primaryPicture then primaryPicture.url else 'http://placehold.it/300x200'
+  ).property('primaryPicture')
+  secondaryPictureUrls : (-> 
+    s = ['http://placehold.it/300x200', 'http://placehold.it/300x200', 'http://placehold.it/300x200']
+    pictures = this.get("secondaryPictures")
+    console.log("here #{pictures}")
+    for picture, i in pictures
+      s[i] = picture.url
+    return s
+  ).property('secondaryPictures').cacheable()
 })
