@@ -10,13 +10,21 @@
  *
  *= require_self
  *= require_tree .
-*/
+ */
 
-
-.preview-container{
+html{
+  height: 100%;
 }
+body{
+  height: 100%;
+}
+.container-fluid{
+  padding : 0;
+}
+ .preview-container{
+ }
 
-.primary-image img{
+ .primary-image img{
   width: 100%; 
   height: 95%; 
   display: block; 
@@ -32,4 +40,24 @@
 
 .paypal-buy-button{
   margin-top: 60px;
+}
+
+.left{
+  max-height : 100%;
+}
+.right{
+  background-color : white;
+}
+
+.new-item-wrapper{
+  padding-bottom: 100px;
+  margin-top: 36px;
+  height: 100%;
+}
+
+.new-item{
+  max-width : 1000px;
+  min-width : 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
 }
