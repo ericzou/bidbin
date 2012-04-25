@@ -18,8 +18,8 @@ html{
 body{
   height: 100%;
 }
-.container-fluid{
-  padding : 0;
+body .container-fluid{
+  padding-right: 0;
 }
  .preview-container{
  }
@@ -60,4 +60,5 @@ body{
   min-width : 500px;
   margin: 0 auto;
   border: 1px solid #ccc;
+  height: 900px;
 }
