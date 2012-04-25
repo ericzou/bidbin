@@ -27,7 +27,7 @@ Bidbin.PicturePreview = Ember.View.extend({
     if primaryPicture then primaryPicture.url else 'http://placehold.it/300x200'
   ).property('primaryPicture')
   secondaryPictureUrls : (-> 
-    s = ['http://placehold.it/300x200', 'http://placehold.it/300x200', 'http://placehold.it/300x200']
+    s = ['http://placehold.it/90x70', 'http://placehold.it/90x70', 'http://placehold.it/90x70']
     pictures = this.get("secondaryPictures")
     console.log("here #{pictures}")
     for picture, i in pictures

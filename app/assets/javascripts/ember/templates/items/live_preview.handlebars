@@ -13,15 +13,16 @@
     <div class="span12 primary-image">
       <img {{bindAttr src="primaryPictureSrc"}} alt="">
     </div>
-    <div class="row-fluid ">
-      {{#each secondaryPictureUrls}}
-      <div class="span4 secondary-image">
-        <img {{bindAttr src="this"}} alt="">
-      </div>
-      {{/each}}
+  </div>
+  <div class="row-fluid ">
+    {{#each secondaryPictureUrls}}
+    <div class="span4 secondary-image">
+      <img {{bindAttr src="this"}} alt="">
     </div>
+    {{/each}}
   </div>
 </div>
+
 {{/view}}
 
 {{#with newItem}}
