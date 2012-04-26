@@ -56,9 +56,82 @@ body .container-fluid{
 }
 
 .new-item{
-  max-width : 1000px;
+  max-width : 1200px;
   min-width : 500px;
   margin: 0 auto;
   border: 1px solid #ccc;
   height: 900px;
+  background-color: white;
+}
+
+.item-text, .item-pictures{
+  margin: 15px 15px;
+  width : 47%;
+  float: left;
+}
+
+.title, .description, .actions, .paypal_email, .primary-img, .secondary-images{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.primary-img{
+  overflow: hidden;
+}
+
+ul.secondary-images li{
+  margin: 10px 10px 0 0;
+  display: block;
+  overflow: hidden;
+  float: left;
+}
+
+
+.title input, .description textarea, .paypal_email input{
+  display: block;
+  width: 98%;
+  border: 1px solid #EEE;
+  resize: none;
+  padding: 1%;
+  margin: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.title input, .paypal_email input{
+  font-weight: lighter;
+  font-size: 29px;
+  font-style: normal;
+  line-height: 32px;
+  color: black;
+  height: 35px;
+  /*padding: 0px 20px 5px 20px;*/
+  margin: 0px;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+}
+
+.description textarea{
+  margin-top : 10px;
+  display: block;
+  font-size: 19px;
+  line-height: 1.4;
+  font-family: Times, Georgia, serif;
+  font-style: italic;
+  color: #555;
+  vertical-align: text-top;
+}
+
+.paypal_email input{
+  margin-top: 10px;
+  font-size: 19px;
+}
+
+a.generate-link{
+  display: block;
+  width: 40%;
+  margin: 30px auto;
+  font-size: 24px;
+  padding: 24px 12px;
 }

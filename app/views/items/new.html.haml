@@ -1,9 +1,30 @@
-.left.span8
+.left.span12
   .new-item-wrapper
     .new-item
+      .row-fluid
+        .item-pictures
+          .primary-img
+            %img(src="http://placehold.it/2000x300")
+          %ul.unstyled.secondary-images
+            %li 
+              %img(src="http://placehold.it/80x60")
+            %li 
+              %img(src="http://placehold.it/80x60")
+            %li 
+              %img(src="http://placehold.it/80x60")
+        .item-text
+          .title
+            %input(type="textfield" placeholder="Enter a title")
+          .description
+            %textarea(placeholder="Enter a description" rows='10')
+          .paypal_email
+            %input(type="textfield" placeholder="Enter your paypal email address")
+      .row-fluid
+        .actions
+          %a.btn.generate-link.btn-success Generate a link for this item
+        
 
 
-.right.span4
   / .span12(style="text-align:center")
   /   %h1 A better way to sell your stuff on forums
 
