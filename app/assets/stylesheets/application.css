@@ -155,7 +155,7 @@ ul.secondary-imgs li{
   font-size: 19px;
 }
 
-a.generate-link{
+button.generate-link{
   display: block;
   width: 40%;
   margin: 30px auto;

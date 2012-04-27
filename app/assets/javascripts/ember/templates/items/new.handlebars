@@ -1,21 +1,22 @@
 <div class='new-item'>
   <div class='row-fluid'>
     {{ view Bidbin.FormPictureView }}
-    <div class='item-text'>
-      <div class='title'>
-        <input placeholder='Enter a title' type='textfield' />
-      </div>
-      <div class='description'>
-        <textarea placeholder='Enter a description' rows='10'></textarea>
-      </div>
-      <div class='paypal_email'>
-        <input placeholder='Enter your paypal email address' type='textfield' />
-      </div>
-    </div>
+    {{ view Bidbin.FormItemView }}
   </div>
   <div class='row-fluid'>
     <div class='actions'>
-      <a class='btn generate-link btn-success'>Generate a link for this item</a>
+      {{#view Bidbin.CreateItemButtonView target="Bidbin.itemsController" action="create" class="btn generate-link btn-success"}}
+        Generate a link for this item
+      {{/view}}
     </div>
   </div>
 </div>
+
+{{#if newItem.slug}}
+<div id="row-fluid">
+  <h3>Here is the direct link to your item</h3>
+  <p>
+    <a {{bindAttr href="newItem.url"}} target="_blank">{{newItem.url}}</a>
+  </p>
+</div>
+{{/if}}

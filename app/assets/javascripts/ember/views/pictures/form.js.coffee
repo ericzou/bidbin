@@ -15,7 +15,6 @@ Bidbin.FormPictureView = Ember.View.extend
   secondaryPictureUrls : (-> 
     s = ['http://placehold.it/300x200', 'http://placehold.it/300x200', 'http://placehold.it/300x200']
     pictures = this.get("secondaryPictures")
-    console.log("oh...no")
     for picture, i in pictures
       s[i] = picture.url
     return s
@@ -29,8 +28,6 @@ Bidbin.FormPictureView = Ember.View.extend
   forthImageUrl : (->
     this.get('secondaryPictureUrls')[2]
   ).property('secondaryPictureUrls')
-
-
 
   didInsertElement : ->
     this._super()      
