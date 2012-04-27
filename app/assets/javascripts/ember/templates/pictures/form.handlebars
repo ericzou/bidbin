@@ -1,15 +1,21 @@
-<div class="row-fluid">
-    {{#view Bidbin.AddPictureView class="add-picture"}}
-      <span class="btn btn-success fileinput-button">
-        <i class="icon-plus icon-white"></i>
-        <span>Add files...</span>
-        <input type="file" name="picture[file]" id="fileupload" data-url="/pictures" multiple>
-      </span>
-    {{/view}}
-  </form>
+<div class='item-pictures'>
+  <div class='primary-img'>
+    <img {{bindAttr src="primaryPictureSrc"}} />
+    <img class='overlay' src='/assets/plus-large.png' />
+    <input type="file" name="picture[file]" id="fileupload" class='fileupload primary-image-uploader' data-url="/pictures">
+  </div>
+  <ul class='unstyled secondary-imgs clearfix'>
+    {{#each secondaryPictureUrls}}
+    <li>
+      <img {{bindAttr src="this"}} />
+      <img class='overlay' src='/assets/plus-small.png' />
+      <input type="file" name="picture[file]" class='fileupload secondary-image-uploader' data-url="/pictures">
+    </li>
+    {{/each}}
+  </ul>
 </div>
 
-
+<!-- 
 {{#view Bidbin.StatView}}
 <ul id="stats">
   <li>Stats Here </li>
@@ -20,4 +26,6 @@
     <li>{{this.id}} : {{this.file_file_name}}</li>
   {{/each}}
 </ul>
-{{/view}}
+{{/view}} 
+
+ -->

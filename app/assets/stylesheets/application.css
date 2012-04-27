@@ -26,6 +26,7 @@ body .container-fluid{
 
  .primary-img{
   position: relative;
+  max-height: 350px;
  }
 
  .primary-img img.overlay{

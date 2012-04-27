@@ -21,3 +21,7 @@ bind a value inside an array need ('content.@each'). e.g.
 use setter to change the value, it will trigger binding.
 
 
+.just like erb, commemted out code will be executed as well, just not show up in html.
+
+
+

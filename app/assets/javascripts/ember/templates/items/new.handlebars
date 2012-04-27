@@ -1,22 +1,21 @@
-<br>
-<br>
-<div class="row-fluid">
-  <div class="span6">
-    <h2 class="">Upload a few pictures</h2>
-    <div class="picture-upload">
-      {{ view Bidbin.FormPictureView}}
+<div class='new-item'>
+  <div class='row-fluid'>
+    {{ view Bidbin.FormPictureView }}
+    <div class='item-text'>
+      <div class='title'>
+        <input placeholder='Enter a title' type='textfield' />
+      </div>
+      <div class='description'>
+        <textarea placeholder='Enter a description' rows='10'></textarea>
+      </div>
+      <div class='paypal_email'>
+        <input placeholder='Enter your paypal email address' type='textfield' />
+      </div>
     </div>
-
-    <h2 class="">Enter a few words</h2>
-    <div class="form">
-      {{view Bidbin.FormItemView}}  
-    </div>
-    
   </div>
-  <div class="span6 live-prview">
-    <h2 class="">Live Preview</h2>
-    {{view Bidbin.LivePreviewView itemBinding="item"}}  
+  <div class='row-fluid'>
+    <div class='actions'>
+      <a class='btn generate-link btn-success'>Generate a link for this item</a>
     </div>
   </div>
 </div>
-
