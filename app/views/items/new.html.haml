@@ -5,13 +5,21 @@
         .item-pictures
           .primary-img
             %img(src="http://placehold.it/2000x300")
-          %ul.unstyled.secondary-images
+            %img.overlay(src="/assets/plus-large.png")
+            %input(name="primary-image" type="file" class="primary-image-uploader")
+          %ul.unstyled.secondary-imgs.clearfix
             %li 
-              %img(src="http://placehold.it/80x60")
+              %img(src="http://placehold.it/200x200")
+              %img.overlay(src="/assets/plus-small.png")
+              %input(name="secondary-image" type="file" class="secondary-image-uploader")
             %li 
-              %img(src="http://placehold.it/80x60")
+              %img(src="http://placehold.it/200x200")
+              %img.overlay(src="/assets/plus-small.png")
+              %input(name="secondary-image" type="file" class="secondary-image-uploader")
             %li 
-              %img(src="http://placehold.it/80x60")
+              %img(src="http://placehold.it/200x200")
+              %img.overlay(src="/assets/plus-small.png")
+              %input(name="secondary-image" type="file" class="secondary-image-uploader")
         .item-text
           .title
             %input(type="textfield" placeholder="Enter a title")
@@ -22,6 +30,8 @@
       .row-fluid
         .actions
           %a.btn.generate-link.btn-success Generate a link for this item
+      
+      
         
 
 
@@ -31,3 +41,4 @@
   
 / %script(type="text/x-handlebars")
 /   {{ view Bidbin.NewItemView }}
+
