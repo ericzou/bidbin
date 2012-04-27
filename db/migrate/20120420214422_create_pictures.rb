@@ -4,6 +4,7 @@ class CreatePictures < ActiveRecord::Migration
       t.boolean :default
       t.has_attached_file :file
       t.timestamps
+      t.integer :picture_position
       t.references :item
     end
   end

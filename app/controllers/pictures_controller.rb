@@ -41,6 +41,7 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = Picture.new(params[:picture])
+    @picture.picture_position = params[:picture_position]
 
     respond_to do |format|
       if @picture.save

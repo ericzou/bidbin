@@ -1,17 +1,26 @@
 Bidbin.picturesController = Ember.ResourceController.create
   content : []
   resourceType : Bidbin.Picture
-  newPicture : Bidbin.Picture.create()
   createPicture : (result) -> 
-    picture = Bidbin.Picture.create({ id : result.id,  file_file_name : result.file_file_name, url : result.url })
+    picture = Bidbin.Picture.create({ id : result.id,  file_file_name : result.file_file_name, url : result.url, picture_position: result.picture_position })
     this.pushObject(picture)
   primaryPicture : (-> 
-    if this.get('content').length > 0
-      return this.get('content')[0]
+    this.get("content").findProperty('picture_position', 1)
   ).property('content.@each').cacheable()
   secondaryPictures : (->
-    content = this.get('content')
-    index_of_last = if content.length > 4 then 3 else content.length-1  
-    if content.length > 1 then content[1..index_of_last] else []
+    this.get("content").filter (pic)-> 
+      pic.picture_position != 1
   ).property('content.@each').cacheable()
+
+  secondPicture : (->
+    this.get("secondaryPictures")?.findProperty('picture_position', 2)
+  ).property('secondaryPictures.@each')
+  
+  thirdPicture : (->
+    this.get("secondaryPictures")?.findProperty('picture_position', 3)
+  ).property('secondaryPictures.@each')
+  
+  forthPicture : (->
+    this.get("secondaryPictures")?.findProperty('picture_position', 4)
+  ).property('secondaryPictures.@each')
 

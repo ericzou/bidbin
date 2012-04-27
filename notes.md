@@ -21,7 +21,9 @@ bind a value inside an array need ('content.@each'). e.g.
 use setter to change the value, it will trigger binding.
 
 
-.just like erb, commemted out code will be executed as well, just not show up in html.
+.just like erb, commemted out code will be executed as well, just not show up in html, you will get cann not metroph error because the ember wont know where to push the data. 
+
+
 
 
 

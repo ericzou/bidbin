@@ -1,31 +1,36 @@
 <div class='item-pictures'>
   <div class='primary-img'>
     <img {{bindAttr src="primaryPictureSrc"}} />
+    {{#if primaryPicture }}
+    {{else}}
     <img class='overlay' src='/assets/plus-large.png' />
-    <input type="file" name="picture[file]" id="fileupload" class='fileupload primary-image-uploader' data-url="/pictures">
+    <input type="file" name="picture[file]" id="fileupload1" class='fileupload primary-image-uploader' data-url="/pictures"/>
+    {{/if}}
   </div>
   <ul class='unstyled secondary-imgs clearfix'>
-    {{#each secondaryPictureUrls}}
     <li>
-      <img {{bindAttr src="this"}} />
+      <img {{bindAttr src="secondImageUrl"}} />
+      {{#if secondPicture }}
+      {{else}}
       <img class='overlay' src='/assets/plus-small.png' />
-      <input type="file" name="picture[file]" class='fileupload secondary-image-uploader' data-url="/pictures">
+      <input type="file" name="picture[file]" class='fileupload second-image-uploader secondary-image-uploader' data-url="/pictures"/>
+      {{/if}}
     </li>
-    {{/each}}
+    <li>
+      <img {{bindAttr src="thirdImageUrl"}} />
+      {{#if thirdPicture}}
+      {{else}}
+      <img class='overlay' src='/assets/plus-small.png' />
+      <input type="file" name="picture[file]" class='fileupload third-image-uploader secondary-image-uploader' data-url="/pictures"/>
+      {{/if}}
+    </li>
+    <li>
+      <img {{bindAttr src="forthImageUrl"}} />
+      {{#if forthPicture}}
+      {{else}}
+      <img class='overlay' src='/assets/plus-small.png' />
+      <input type="file" name="picture[file]" class='fileupload forth-image-uploader secondary-image-uploader' data-url="/pictures"/>
+      {{/if}}
+    </li>
   </ul>
 </div>
-
-<!-- 
-{{#view Bidbin.StatView}}
-<ul id="stats">
-  <li>Stats Here </li>
-  {{#with Bidbin.picturesController.content}}
-    <li>Picture count : {{ length }}</li>  
-  {{/with}}
-  {{#each pictures  }}
-    <li>{{this.id}} : {{this.file_file_name}}</li>
-  {{/each}}
-</ul>
-{{/view}} 
-
- -->
